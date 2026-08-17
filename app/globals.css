@@ -1,0 +1,140 @@
+/* Intentionally plain. The brief says not to spend time on the frontend. */
+:root {
+  /* Pinned to light so the UI does not follow the OS dark preference - the
+     palette below (and the .error colours) is only tuned for a light page. */
+  color-scheme: light;
+  --bg: #ffffff;
+  --fg: #18181b;
+  --border: #d4d4d8;
+  --muted: #6b7280;
+  --bg-soft: #f4f4f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+main {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+nav {
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav .spacer {
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+button {
+  background: var(--bg-soft);
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0.4rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  padding: 0.5rem 0.6rem;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.pager {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+}
